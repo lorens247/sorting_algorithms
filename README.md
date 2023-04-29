@@ -1,4 +1,4 @@
-# Sorting algorithms & Big O
+# C - Sorting algorithms & Big O
 
 ## General
 - At least four different sorting algorithms
