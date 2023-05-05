@@ -45,21 +45,21 @@ void insertion_sort_list(listint_t **list)
 		i = i->next;
 	/* Move the node at j to its correct position */
 	while (j && j->prev)
-	{
-	/* If the previous node is greater than the current node, swap them */
-	if (j->prev->n > j->n)
 		{
-		    swap(j->prev, j);
+	/* If the previous node is greater than the current node, swap them */
+		if (j->prev->n > j->n)
+			{
+			swap(j->prev, j);
 		/* Update the head of the list if necessary */
 		if (!j->prev)
 			*list = j;
 
 		/* Print the list after each swap */
 	       print_list((const listint_t *)*list);
+			}
+		else
+			j = j->prev;
 		}
-	else
-		    j = j->prev;
 	}
-}
 }
 

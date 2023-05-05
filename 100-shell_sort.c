@@ -1,13 +1,28 @@
 #include "sort.h"
 
 /**
-* shell_sort - sorts an array of integers in ascending order using
-* the Shell sort algorithm, using the Knuth sequence
-* @array: the array of integers
-* @size: size of the array
-*
-* Return: none
-*/
+ * swap_ints - swap two integers in an array
+ * @a: first integer to swap
+ * @b: second integer to swap
+ */
+
+void swap_ints(int *a, int *b)
+{
+	int tmp;
+
+	tmp = *a;
+	a* = *b;
+	*b = tmp;
+}
+
+/**
+ * shell_sort - sorts an array of integers in ascending order using
+ * the Shell sort algorithm, using the Knuth sequence
+ * @array: the array of integers
+ * @size: size of the array
+ *
+ * Return: none
+ */
 void shell_sort(int *array, size_t size)
 {
 	size_t i, j, gap = 1;
